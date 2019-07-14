@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	allocator, err := gpuallocator.NewSimpleAllocator()
+	// allocator, err := gpuallocator.NewSimpleAllocator()
+	allocator, err := gpuallocator.NewBestEffortAllocator()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%v\n", err)
 	}
